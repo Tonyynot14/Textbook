@@ -117,14 +117,14 @@ def date(days,year):
             days =days-334
     return days
 
-#Makes clock show hour in am or pm
+# Changes clock from military time to standard time
 def amPmTime(hour):
     if hour>12:
         hour-=12
     return hour
 
 
-#displays time in military time and date in month day, year
+
 def dateTime():
     currentTime=time.time()
 
@@ -143,7 +143,7 @@ def dateTime():
 
     totalDays=totalHours/24
 
-    #year will update after ever loop
+    # year will update after ever loop
     year= 1970
     while totalDays>366:
         if year%400==0 or(year%4==0 and year%100!=0):
@@ -155,14 +155,12 @@ def dateTime():
     totalDays=int(totalDays)
 
 
-
-
-# Formatting for display of time
+# Formatting for display of time addes in pm
     if currentHour >=12  and currentHour < 24:
 
         print(amPmTime(currentHour),":",currentMinute,":",currentSecond," PM ",month(totalDays,year)," ",date(totalDays,year),", ",year,sep="")
 
-# Formatting for display of time
+# Formatting for display of time adds in am
     else:
         if currentHour == 0:
             currentHour = 12
