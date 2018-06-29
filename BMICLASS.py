@@ -1,3 +1,7 @@
+# Tony
+# 6/29/2018
+# This class is for BMI and has functions to return name age weight and height
+#  and calculate bmi as well as the status of that bmi
 class BMI:
     def __init__(self,name,age,weight,height):
         self.__name = name
